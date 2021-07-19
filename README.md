@@ -1,6 +1,37 @@
-# Getting Started with Create React App
+# React Typescript challenge
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Project deploys
+
+* [Heroku](https://react-typescript-challenge.herokuapp.com/)
+* [AWSAmplify](https://master.d37cqv3ukqx167.amplifyapp.com/)
+* [Azure](https://lemon-cliff-013638203.azurestaticapps.net/)
+
+## Challenge requirements
+
+1. Fetch all media from the endpoint
+   (https://run.mocky.io/v3/a811c0e9-adae-4554-9694-173aa23bc38b)
+2. Render each Medium into a card
+   * Cover image
+   * Title
+   * Status / Last edited
+3. The card can render the many possible states of a Medium and have slightly different renders:
+   * “ready”: On hover state should show an edit button on top of the cover image, and show how many languages the
+     Medium has;
+   * “error”: Show an error message instead of the cover image;
+   * “transcribing”: Show a loading bar on top of the cover image;
+
+## Solution
+
+1. Data Fetched with axios HTTP client as it is easy to use, and it works with async/await that increase readability.
+2. After data is fetched each Medium is rendered in a card with reusable component Card.
+3. Each status is handled separately with its own component as the logic is quite different.
+
+### For this solution were used:
+
+* [Bootstrap](https://www.npmjs.com/package/bootstrap) to use fast styling
+* [MaterialUI Icons](https://www.npmjs.com/package/@material-ui/icons) to use icons
+* [MaterialUI Styles](https://www.npmjs.com/package/@material-ui/styles) to use additional styling
+* [Moment.js](https://www.npmjs.com/package/moment) to calculate and show human-readable date format
 
 ## Available Scripts
 
@@ -39,8 +70,4 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).

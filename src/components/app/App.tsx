@@ -57,13 +57,17 @@ function App() {
   return (
       <div className={styles.app}>
         <div className="container g-4 mt-4">
-          {data.length ? (<Filter statuses={statuses} languages={languages} filters={filter}
-                                  clickHandler={updateFilter}/>
-          ) : ''}
-          <div className="row row-cols-1 row-cols-md-2 g-4">
-            {filteredData.length ? filteredData.map((el: CardItem) => <Card key={el.id}
-                                                                            children={el}/>) : 'Nothing found, sorry'}
-          </div>
+          {!data.length
+              ? <h3>Loading...</h3>
+              : (<>
+                <Filter statuses={statuses} languages={languages} filters={filter}
+                        clickHandler={updateFilter}/>
+                <div className="row row-cols-1 row-cols-md-2 g-4">
+                  {filteredData.length
+                      ? filteredData.map((el: CardItem) => <Card key={el.id} children={el}/>)
+                      : <h4>Nothing found, sorry</h4>}
+                </div>
+              </>)}
         </div>
       </div>
   );

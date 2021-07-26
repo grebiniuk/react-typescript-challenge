@@ -19,6 +19,7 @@
      Medium has;
    * “error”: Show an error message instead of the cover image;
    * “transcribing”: Show a loading bar on top of the cover image;
+4. Add some filters on top, based on the Medium status and the languages (eg. show only media in english).
 
 ## Solution
 

@@ -1,24 +1,15 @@
 import React, {useState} from 'react';
 import Moment from 'react-moment';
 
+import {CardItem} from '../app/App';
 import {useStyles} from './Card.styles';
 import {UPLOAD_STATUS, UPLOAD_STATUS_TEXT} from '../../const/card.consts';
 import Error from '../statuses/error/Error';
 import Ready from '../statuses/ready/Ready';
 import Transcribing from '../statuses/transcribing/Transcribing';
 
-type CartItem = {
-  id: number;
-  name: string;
-  cover: string;
-  languages: string[];
-  status: 'ready' | 'error' | 'transcribing';
-  createdAt: string;
-  updatedAt: string;
-}
-
 type CardProps = {
-  children: CartItem
+  children: CardItem
 }
 
 function Card({children: {name, status, cover, languages, updatedAt}}: CardProps) {

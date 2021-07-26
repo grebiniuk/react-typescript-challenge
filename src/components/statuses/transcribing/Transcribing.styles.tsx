@@ -7,7 +7,8 @@ export const useStyles = makeStyles(() => ({
     left: '50%',
     textAlign: 'center',
     transform: 'translate(-50%,-50%)',
-    width: 300
+    maxWidth: 300,
+    minWidth: 200,
   },
   textMuted: {
     opacity: 0.7,

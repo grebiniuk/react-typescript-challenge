@@ -23,3 +23,7 @@ img {
 .brand-color {
   background-color: #8a50f7;
 }
+
+span {
+  text-transform: capitalize;
+}
